@@ -34,7 +34,15 @@ public class CanvasView extends View {
         //四角を描く
         paint.setColor(Color.rgb(192, 255, 0));
         paint.setStyle(Paint.Style.FILL);
+
         canvas.drawRect(50,20,250,100, paint);
+
+        //線を描く
+        paint.setColor(Color.rgb(255,0,80));
+        paint.setStrokeWidth(10);
+        paint.setStrokeCap(Paint.Cap.ROUND);
+
+        canvas.drawLine(20, 20, sx - 20, sy - 20, paint);
     }
 
 
