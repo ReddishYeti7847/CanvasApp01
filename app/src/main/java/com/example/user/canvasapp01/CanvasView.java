@@ -25,7 +25,7 @@ public class CanvasView extends View {
         float sy = canvas.getHeight();
 
         //背景を塗りつぶす
-        canvas.drawColor(Color.BLACK);
+        canvas.drawColor(Color.BLUE);
 
         //円を描く
         paint.setColor(Color.rgb(0,255,160));
@@ -57,6 +57,36 @@ public class CanvasView extends View {
         path.lineTo(500,600);
 
         canvas.drawPath(path, paint);
+
+        //国旗(モザンビーク)
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.GREEN);
+        canvas.drawRect(0,0,500,300, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawRect(0,100,500,300, paint);
+        paint.setColor(Color.YELLOW);
+        canvas.drawRect(0,200,500,300, paint);
+
+        paint.setColor(Color.WHITE);
+        canvas.drawRect(0,95,500,105, paint);
+        paint.setColor(Color.WHITE);
+        canvas.drawRect(0,195,500,205, paint);
+
+        path.reset();
+        path.moveTo(0,0);
+        path.lineTo(180,150);
+        path.lineTo(0,300);
+        path.lineTo(0,0);
+        paint.setColor(Color.RED);
+        canvas.drawPath(path, paint);
+
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(10);
+        paint.setColor(Color.BLACK);
+        canvas.drawRect(0,0,500,300, paint);
+
+        paint.setColor(Color.GREEN);
+
     }
 
 
